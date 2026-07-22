@@ -20,6 +20,9 @@ jobs:
       - name: install dependencies
         run: npm ci
 
+      - name: install Quartz plugins
+        run: npx quartz plugin install
+
       - name: build app
         run: npx quartz build
           
