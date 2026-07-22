@@ -15,7 +15,6 @@ jobs:
       - name: build app
         run: |
           npx quartz-build  
-          npm run build
 
       - name: copy build to vps
         uses: appleboy/scp-action@master
