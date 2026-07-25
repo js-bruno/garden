@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: thisdev.space/theory
+  baseUrl: notes.thisdev.space
   ignorePatterns:
     - private
     - templates
