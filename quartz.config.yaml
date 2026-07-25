@@ -16,9 +16,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Fraunces
+      body: Albert Sans
+      code: JetBrains Mono
     colors:
       lightMode:
         light: "#faf8f8"
@@ -262,7 +262,7 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
       theme: creme-brulee
   - source: github:quartz-community/obsidian-plugin-excalidraw
