@@ -1,1 +1,0 @@
-gerenciado de pacotes nix 

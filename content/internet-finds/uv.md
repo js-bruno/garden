@@ -1,1 +1,0 @@
-https://astral.sh/blog/uv-unified-python-packaging
