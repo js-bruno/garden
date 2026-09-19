@@ -1,3 +1,116 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+/* ─────────────────────────────────────────────────────────────
+   Jardim — identidade botânica (discreta)
+   ───────────────────────────────────────────────────────────── */
+
+/* Claridade suave no topo (luz de manhã) */
+body {
+  background-color: var(--light);
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--secondary) 9%, transparent),
+    transparent 18rem
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 18rem;
+  background-attachment: fixed;
+}
+
+/* Título da página */
+.article-title {
+  font-weight: 600;
+}
+
+.page article > h1 {
+  font-weight: 600;
+}
+
+/* Filete botânico sob h2 — cor única, hairline */
+article h2 {
+  position: relative;
+  padding-bottom: 0.4rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 3rem;
+    background: var(--secondary);
+  }
+}
+
+/* Citações — margem discreta de caderno */
+article blockquote {
+  border-left: 2px solid var(--secondary);
+  background: color-mix(in srgb, var(--secondary) 6%, transparent);
+  border-radius: 0;
+  padding: 0.6rem 1rem;
+}
+
+/* Título dos callouts em serifa */
+.callout-title-inner {
+  font-family: var(--headerFont);
+}
+
+/* Callouts — paleta botânica no lugar do default Obsidian */
+.callout {
+  &[data-callout] {
+    --color: #5f8a4f;
+    --border: #5f8a4f40;
+    --bg: #5f8a4f12;
+  }
+
+  &[data-callout="abstract"] {
+    --color: #7a9a6a;
+    --border: #7a9a6a40;
+    --bg: #7a9a6a12;
+  }
+
+  &[data-callout="info"],
+  &[data-callout="todo"] {
+    --color: #5a8290;
+    --border: #5a829040;
+    --bg: #5a829012;
+  }
+
+  &[data-callout="tip"] {
+    --color: #7a8a5a;
+    --border: #7a8a5a40;
+    --bg: #7a8a5a12;
+  }
+
+  &[data-callout="success"] {
+    --color: #5a8a52;
+    --border: #5a8a5240;
+    --bg: #5a8a5212;
+  }
+
+  &[data-callout="question"] {
+    --color: #b08a3c;
+    --border: #b08a3c40;
+    --bg: #b08a3c12;
+  }
+
+  &[data-callout="warning"] {
+    --color: #b06f3c;
+    --border: #b06f3c40;
+    --bg: #b06f3c12;
+  }
+
+  &[data-callout="failure"],
+  &[data-callout="danger"],
+  &[data-callout="bug"] {
+    --color: #b0554a;
+    --border: #b0554a40;
+    --bg: #b0554a12;
+  }
+
+  &[data-callout="example"] {
+    --color: #8a6a82;
+    --border: #8a6a8240;
+    --bg: #8a6a8212;
+  }
+}
